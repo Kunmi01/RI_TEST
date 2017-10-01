@@ -1,0 +1,35 @@
+.test-container {
+    background-color: lightgray;
+    height: 100%;
+    padding: 1rem;
+}
+
+.ui.grid {
+    margin: 0;
+}
+
+.item {
+    border: 0.1rem solid lightgray;
+    margin: 0.5rem 0;
+}
+
+.ui.grid .item-name {
+    width: 20rem;
+}
+
+.ui.grid .item-price {
+    width: 11rem;
+}
+
+.ui.button {
+    width: 7rem;
+}
+
+.ui.grid .label {
+    margin-left: 39.5rem;
+}
+
+.ui .basket-total {
+    border-top: 0.1rem solid gray;
+    margin-top: 1rem;
+}

@@ -1,0 +1,18 @@
+# compiled output
+dist/
+tmp/
+target/
+
+# dependencies
+node_modules/
+
+# misc
+.sass-cache
+npm-debug.log
+testem.log
+typings
+npm-debug.log.*
+
+#System Files
+.DS_Store
+Thumbs.db

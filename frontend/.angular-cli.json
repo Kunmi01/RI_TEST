@@ -1,0 +1,35 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "project": {
+        "name": "RI Test"
+    },
+    "apps": [{
+        "root": "src",
+        "outDir": "dist",
+        "assets": ["assets"],
+        "index": "index.html",
+        "main": "main.ts",
+        "polyfills": "polyfills.ts",
+        "tsconfig": "tsconfig.app.json",
+        "prefix": "app",
+        "styles": [
+            "spinner.css",
+            "../semantic/dist/semantic.css",
+            "ri-test.css"
+        ],
+        "scripts": [],
+        "environmentSource": "environments/environment.ts",
+        "environments": {
+            "dev": "environments/environment.dev.ts",
+            "local": "environments/environment.local.ts",
+            "prod": "environments/environment.prod.ts"
+        }
+    }],
+    "lint": [{
+        "project": "src/tsconfig.app.json"
+    }],
+    "defaults": {
+        "styleExt": "css",
+        "component": {}
+    }
+}

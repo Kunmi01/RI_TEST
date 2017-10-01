@@ -1,0 +1,62 @@
+<div class="test-container">
+    <div class="ui segment">
+        <h3 class="ui dividing left aligned header">Product List</h3>
+        <div class="ui grid products-container">
+            <div class="row headers">
+                <div class="column item-code">Item Code</div>
+                <div class="column item-name">Item Name</div>
+                <div class="column item-price">Item Price</div>
+            </div>
+            <div class="row item" *ngFor="let item of items">
+                <div class="column item-code">{{item.code}}</div>
+                <div class="column item-name">{{item.name}}</div>
+                <div class="column item-price">{{item.price | currency:'GBP':true:'1.2-2'}}</div>
+                <div class="column">
+                    <button class="ui green button" type="button" (click)="add(item.code)">
+                        Add
+                    </button>
+                </div>
+                <div class="column">
+                    <button class="ui red button" type="button" (click)="remove(item.code)">
+                        Remove
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui segment">
+        <h3 class="ui dividing left aligned header">Shopping Basket</h3>
+        <div class="ui grid products-container">
+            <div class="row headers">
+                <div class="column item-code">Item Code</div>
+                <div class="column item-name">Item Name</div>
+                <div class="column item-price">Item Price</div>
+                <div class="column item-quantity">Item Quantity</div>
+                <div class="column item-total">Item Total</div>
+            </div>
+            <div class="row item" *ngFor="let item of basket">
+                <div class="column item-code">{{item.code}}</div>
+                <div class="column item-name">{{item.name}}</div>
+                <div class="column item-price">{{item.price | currency:'GBP':true:'1.2-2'}}</div>
+                <div class="column item-quantity">{{item.quantity}}</div>
+                <div class="column item-total">{{item.total | currency:'GBP':true:'1.2-2'}}</div>
+            </div>
+            <div class="row basket-total">
+                    <div class="column label">Basket Total</div>
+                    <div class="column value">{{basketTotal | currency:'GBP':true:'1.2-2'}}</div>
+                </div>
+            <div class="row discount" style="color: green" *ngIf="discount > 0">
+                <div class="column label">Discount</div>
+                <div class="column value">- {{discount | currency:'GBP':true:'1.2-2'}}</div>
+            </div>
+            <div class="row shipping-cost">
+                <div class="column label">Shipping Cost</div>
+                <div class="column value">{{shippingCost | currency:'GBP':true:'1.2-2'}}</div>
+            </div>
+            <div class="row grand-total" style="font-size: 1.1rem">
+                <div class="column label" style="font-weight: bold">Grand Total</div>
+                <div class="column value" style="font-weight: bold">{{grandTotal | currency:'GBP':true:'1.2-2'}}</div>
+            </div>
+        </div>
+    </div>
+</div>
