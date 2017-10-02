@@ -49,7 +49,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
         const isInBasket = this.basket.findIndex(_item => {
             return _item.code === itemCode;
-        }) >= 0;
+        }) > -1;
 
         if (!isInBasket) {
             this.basket.push(item);
@@ -124,8 +124,6 @@ export class AppComponent implements OnInit, OnDestroy {
             this.shippingCost = 3.99;
         } else if (totalWithDiscount >= 10.00 && totalWithDiscount < 30.00) {
             this.shippingCost = 1.99;
-        } else if (totalWithDiscount >= 30.00) {
-            this.shippingCost = 0;
         }
     }
 
